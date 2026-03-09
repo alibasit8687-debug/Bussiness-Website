@@ -1,0 +1,595 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Tailwind Css -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <!-- Google Fonts - Professional Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <title>Basit Business | Premium Solutions</title>
+    <!-- Custom Styles -->
+    <style>
+        * {
+            font-family: 'Inter', sans-serif;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Professional Gradient Background */
+        .vip-gradient {
+            background: linear-gradient(145deg, #0a0f1e 0%, #141b2b 100%);
+        }
+
+        /* Glassmorphism Cards */
+        .glass-card {
+            background: rgba(20, 28, 45, 0.7);
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(212, 175, 55, 0.2);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.36);
+        }
+
+        /* Gold Theme */
+        .gold-bg {
+            background: linear-gradient(135deg, #d4af37 0%, #996515 100%);
+        }
+
+        .gold-text {
+            color: #d4af37;
+        }
+
+        .gold-border {
+            border-color: #d4af37;
+        }
+
+        .gold-hover:hover {
+            color: #d4af37;
+            border-color: #d4af37;
+            transition: all 0.3s ease;
+        }
+
+        /* Animations */
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        /* Hover Effects */
+        .service-card {
+            transition: all 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px -10px rgba(212, 175, 55, 0.3);
+            border-color: #d4af37;
+        }
+
+        /* Professional Button */
+        .btn-gold {
+            background: linear-gradient(135deg, #d4af37 0%, #b8860b 100%);
+            transition: all 0.3s ease;
+        }
+
+        .btn-gold:hover {
+            background: linear-gradient(135deg, #e5c158 0%, #c69c1c 100%);
+            transform: scale(1.05);
+            box-shadow: 0 10px 25px -5px rgba(212, 175, 55, 0.5);
+        }
+    </style>
+</head>
+
+<body class="vip-gradient text-gray-200 min-h-screen">
+
+    <!-- ===== PREMIUM NAVIGATION ===== -->
+    <nav
+        class="glass-card fixed w-full z-50 top-0 left-0 px-6 py-4 flex justify-between items-center border-b border-yellow-700/30">
+        <div class="flex items-center gap-2">
+            <div class="w-10 h-10 gold-bg rounded-lg flex items-center justify-center">
+                <i class="fas fa-crown text-white text-xl"></i>
+            </div>
+            <div>
+                <span class="text-2xl font-bold gold-text">BASIT</span>
+                <span class="text-white font-light">BUSINESS</span>
+            </div>
+        </div>
+
+        <!-- Desktop Menu -->
+        <div class="hidden md:flex items-center space-x-8">
+            <a href="#home" class="text-sm font-medium hover-gold transition">HOME</a>
+            <a href="#services" class="text-sm font-medium hover-gold transition">SERVICES</a>
+            <a href="#about" class="text-sm font-medium hover-gold transition">ABOUT</a>
+            <a href="#portfolio" class="text-sm font-medium hover-gold transition">PORTFOLIO</a>
+            <a href="#contact" class="text-sm font-medium hover-gold transition">CONTACT</a>
+        </div>
+
+        <!-- Contact Button -->
+        <a href="#contact"
+            class="btn-gold text-white px-6 py-2 rounded-lg text-sm font-semibold flex items-center gap-2">
+            <i class="fas fa-phone-alt"></i>
+            <span>+92 327 4916727</span>
+        </a>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section id="home" class="min-h-screen flex items-center justify-center pt-20 px-4">
+        <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-center">
+            <!-- Left Content -->
+            <div class="space-y-6">
+                <div class="inline-block">
+                    <span class="gold-text text-sm font-semibold tracking-[0.3em]">✦ WELCOME TO VIP BUSINESS
+                        ✦</span>
+                </div>
+
+                <h1 class="text-5xl md:text-6xl font-bold leading-tight">
+                    <span class="text-white">We Build</span><br>
+                    <span class="gold-text">Digital Empires</span>
+                </h1>
+
+                <p class="text-gray-400 text-lg max-w-xl">
+                    Premium web development, AI solutions, and graphic design services for businesses that demand
+                    excellence. 10+ years of industry leadership.
+                </p>
+
+                <!-- CTA Buttons -->
+                <div class="flex flex-wrap gap-4 pt-4">
+                    <a href="#contact"
+                        class="btn-gold text-white px-8 py-4 rounded-lg font-semibold flex items-center gap-2">
+                        <i class="fas fa-calendar-check"></i>
+                        <span>Schedule Consultation</span>
+                    </a>
+                    <a href="#portfolio"
+                        class="border border-yellow-700 text-yellow-400 px-8 py-4 rounded-lg font-semibold flex items-center gap-2 hover:bg-yellow-900/20 transition">
+                        <i class="fas fa-play-circle"></i>
+                        <span>View Our Work</span>
+                    </a>
+                </div>
+
+                <!-- Stats -->
+                <div class="grid grid-cols-3 gap-6 pt-8">
+                    <div>
+                        <div class="text-3xl font-bold gold-text">500+</div>
+                        <div class="text-sm text-gray-500">Projects Done</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold gold-text">50+</div>
+                        <div class="text-sm text-gray-500">Team Experts</div>
+                    </div>
+                    <div>
+                        <div class="text-3xl font-bold gold-text">15+</div>
+                        <div class="text-sm text-gray-500">Global Awards</div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right Image -->
+            <div class="hidden md:block">
+                <div class="relative">
+                    <!-- Main Circle -->
+                    <div class="w-96 h-96 rounded-full gold-bg opacity-20 absolute top-0 right-0 blur-3xl"></div>
+
+                    <!-- Professional Image Placeholder -->
+                    <div class="relative z-10 glass-card rounded-2xl p-8 float-animation">
+                        <div class="bg-gradient-to-br from-yellow-900/30 to-purple-900/30 rounded-xl p-6">
+                            <i class="fas fa-chart-line text-8xl gold-text opacity-50"></i>
+                        </div>
+                        <div class="mt-6 space-y-3">
+                            <div class="flex items-center gap-3">
+                                <i class="fas fa-check-circle gold-text"></i>
+                                <span>Fortune 500 Clients</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fas fa-check-circle gold-text"></i>
+                                <span>Global Recognition</span>
+                            </div>
+                            <div class="flex items-center gap-3">
+                                <i class="fas fa-check-circle gold-text"></i>
+                                <span>24/7 Premium Support</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SERVICES SECTION ===== -->
+    <section id="services" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <span class="gold-text text-sm font-semibold tracking-[0.3em]">✦ OUR PREMIUM SERVICES ✦</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-4">What We Offer</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto mt-4">
+                    Comprehensive digital solutions tailored for your business growth
+                </p>
+            </div>
+
+            <!-- Services Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <!-- Service 1: Web Development -->
+                <div class="glass-card p-8 rounded-2xl service-card">
+                    <div class="w-16 h-16 gold-bg rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-code text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Web Development</h3>
+                    <p class="text-gray-400 mb-4">Custom websites, web applications, e-commerce solutions with
+                        cutting-edge technology.</p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><i class="fas fa-check gold-text mr-2"></i> React, Vue, Angular</li>
+                        <li><i class="fas fa-check gold-text mr-2"></i> Laravel, Node.js, Python</li>
+                        <li><i class="fas fa-check gold-text mr-2"></i> E-commerce & CMS</li>
+                    </ul>
+                </div>
+
+                <!-- Service 2: Graphic Design -->
+                <div class="glass-card p-8 rounded-2xl service-card">
+                    <div class="w-16 h-16 gold-bg rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-paint-brush text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Graphic Design</h3>
+                    <p class="text-gray-400 mb-4">Stunning visuals, brand identity, and creative designs that
+                        capture attention.</p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><i class="fas fa-check gold-text mr-2"></i> Logo & Branding</li>
+                        <li><i class="fas fa-check gold-text mr-2"></i> Social Media Graphics</li>
+                        <li><i class="fas fa-check gold-text mr-2"></i> Print & Digital Media</li>
+                    </ul>
+                </div>
+
+                <!-- Service 3: Artificial Intelligence -->
+                <div class="glass-card p-8 rounded-2xl service-card">
+                    <div class="w-16 h-16 gold-bg rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-robot text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Artificial Intelligence</h3>
+                    <p class="text-gray-400 mb-4">AI-powered solutions to automate, optimize, and transform your
+                        business.</p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><i class="fas fa-check gold-text mr-2"></i> Machine Learning Models</li>
+                        <li><i class="fas fa-check gold-text mr-2"></i> Chatbots & Automation</li>
+                        <li><i class="fas fa-check gold-text mr-2"></i> Data Analytics</li>
+                    </ul>
+                </div>
+
+                <!-- Service 4: Digital Marketing -->
+                <div class="glass-card p-8 rounded-2xl service-card">
+                    <div class="w-16 h-16 gold-bg rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-chart-line text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Digital Marketing</h3>
+                    <p class="text-gray-400 mb-4">Data-driven marketing strategies to boost your online presence.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><i class="fas fa-check gold-text mr-2"></i> SEO & SEM</li>
+                        <li><i class="fas fa-check gold-text mr-2"></i> Social Media Marketing</li>
+                        <li><i class="fas fa-check gold-text mr-2"></i> Email Campaigns</li>
+                    </ul>
+                </div>
+
+                <!-- Service 5: Mobile App Development -->
+                <div class="glass-card p-8 rounded-2xl service-card">
+                    <div class="w-16 h-16 gold-bg rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-mobile-alt text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">App Development</h3>
+                    <p class="text-gray-400 mb-4">Native and cross-platform mobile applications for iOS & Android.
+                    </p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><i class="fas fa-check gold-text mr-2"></i> iOS & Android Apps</li>
+                        <li><i class="fas fa-check gold-text mr-2"></i> React Native, Flutter</li>
+                        <li><i class="fas fa-check gold-text mr-2"></i> App Store Optimization</li>
+                    </ul>
+                </div>
+
+                <!-- Service 6: UI/UX Design -->
+                <div class="glass-card p-8 rounded-2xl service-card">
+                    <div class="w-16 h-16 gold-bg rounded-xl flex items-center justify-center mb-6">
+                        <i class="fas fa-pencil-ruler text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">UI/UX Design</h3>
+                    <p class="text-gray-400 mb-4">User-centered design that enhances engagement and conversion.</p>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><i class="fas fa-check gold-text mr-2"></i> Wireframing & Prototyping</li>
+                        <li><i class="fas fa-check gold-text mr-2"></i> User Research</li>
+                        <li><i class="fas fa-check gold-text mr-2"></i> Interaction Design</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section id="about" class="py-20 px-4 border-t border-yellow-900/30">
+        <div class="max-w-7xl mx-auto">
+            <div class="glass-card rounded-3xl p-12">
+                <div class="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <span class="gold-text text-sm font-semibold tracking-[0.3em]">✦ ABOUT US ✦</span>
+                        <h2 class="text-4xl font-bold mt-4">Global Leaders in Digital Innovation</h2>
+                        <p class="text-gray-400 mt-6 leading-relaxed">
+                            With over a decade of experience, we've helped 500+ businesses transform their digital
+                            presence. Our team of 50+ experts combines creativity, technology, and strategy to
+                            deliver exceptional results.
+                        </p>
+
+                        <!-- Company Details -->
+                        <div class="mt-8 space-y-4">
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 gold-bg rounded-full flex items-center justify-center">
+                                    <i class="fas fa-calendar-alt text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="text-sm text-gray-500">Established</div>
+                                    <div class="font-semibold">2024 | 2+ Years Excellence</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 gold-bg rounded-full flex items-center justify-center">
+                                    <i class="fas fa-globe text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="text-sm text-gray-500">Global Presence</div>
+                                    <div class="font-semibold">VCH8+5X Okara, Pakistan</div>
+                                </div>
+                            </div>
+
+                            <div class="flex items-center gap-4">
+                                <div class="w-12 h-12 gold-bg rounded-full flex items-center justify-center">
+                                    <i class="fas fa-trophy text-white"></i>
+                                </div>
+                                <div>
+                                    <div class="text-sm text-gray-500">Awards</div>
+                                    <div class="font-semibold">15+ International Awards</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glass-card p-8 rounded-2xl">
+                        <h3 class="text-2xl font-bold gold-text mb-6">Why Choose Us?</h3>
+                        <div class="space-y-6">
+                            <div class="flex gap-4">
+                                <i class="fas fa-check-circle gold-text text-2xl"></i>
+                                <div>
+                                    <h4 class="font-semibold">Premium Quality</h4>
+                                    <p class="text-gray-400 text-sm">We never compromise on quality</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <i class="fas fa-check-circle gold-text text-2xl"></i>
+                                <div>
+                                    <h4 class="font-semibold">Timely Delivery</h4>
+                                    <p class="text-gray-400 text-sm">Projects delivered on schedule</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <i class="fas fa-check-circle gold-text text-2xl"></i>
+                                <div>
+                                    <h4 class="font-semibold">24/7 Support</h4>
+                                    <p class="text-gray-400 text-sm">Round-the-clock assistance</p>
+                                </div>
+                            </div>
+                            <div class="flex gap-4">
+                                <i class="fas fa-check-circle gold-text text-2xl"></i>
+                                <div>
+                                    <h4 class="font-semibold">Innovation First</h4>
+                                    <p class="text-gray-400 text-sm">Latest technologies & trends</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION with YOUR DETAILS ===== -->
+    <section id="contact" class="py-20 px-4">
+        <div class="max-w-7xl mx-auto">
+            <!-- Section Header -->
+            <div class="text-center mb-16">
+                <span class="gold-text text-sm font-semibold tracking-[0.3em]">✦ GET IN TOUCH ✦</span>
+                <h2 class="text-4xl md:text-5xl font-bold mt-4">Contact Our Team</h2>
+                <p class="text-gray-400 max-w-2xl mx-auto mt-4">
+                    Ready to start your project? Reach out to us for a free consultation
+                </p>
+            </div>
+
+            <div class="grid lg:grid-cols-3 gap-8">
+                <!-- Contact Cards -->
+                <div class="glass-card p-8 rounded-2xl text-center service-card">
+                    <div class="w-20 h-20 gold-bg rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-phone-alt text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Phone</h3>
+                    <p class="text-gray-400 mb-4">Mon-Fri 9am to 6pm</p>
+                    <a href="tel:+923001234567" class="text-xl gold-text font-semibold hover:underline">+92 327
+                        4916727</a>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl text-center service-card">
+                    <div class="w-20 h-20 gold-bg rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-envelope text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Email</h3>
+                    <p class="text-gray-400 mb-4">24/7 Email Support</p>
+                    <a href="mailto:info@yourcompany.com"
+                        class="text-xl gold-text font-semibold hover:underline">raisahab2773@gmail.com</a>
+                </div>
+
+                <div class="glass-card p-8 rounded-2xl text-center service-card">
+                    <div class="w-20 h-20 gold-bg rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-map-marker-alt text-white text-3xl"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-2">Office</h3>
+                    <p class="text-gray-400 mb-4">Visit Our Headquarters</p>
+                    <p class="text-xl gold-text font-semibold">VCH8+5X Okara, Pakistan</p>
+                </div>
+            </div>
+
+            <!-- Contact Form with WhatsApp & Map -->
+            <div class="mt-12 glass-card rounded-3xl p-8 md:p-12">
+                <div class="grid lg:grid-cols-2 gap-12">
+                    <!-- Left: Form -->
+                    <div>
+                        <h3 class="text-2xl font-bold mb-6">Send Us a Message</h3>
+                        <form action="https://formspree.io/f/mpqyavpe" method="POST" class="space-y-4">
+                            <div class="grid md:grid-cols-2 gap-4">
+                                <input type="text" name="name" placeholder="Your Name"
+                                    class="w-full p-4 rounded-xl bg-black/40 border border-gray-700 focus:border-yellow-600 outline-none text-white"
+                                    required>
+                                <input type="email" name="email" placeholder="Email Address"
+                                    class="w-full p-4 rounded-xl bg-black/40 border border-gray-700 focus:border-yellow-600 outline-none text-white"
+                                    required>
+                            </div>
+                            <input type="text" name="phone" placeholder="Phone Number"
+                                class="w-full p-4 rounded-xl bg-black/40 border border-gray-700 focus:border-yellow-600 outline-none text-white">
+                            <select name="service"
+                                class="w-full p-4 rounded-xl bg-black/40 border border-gray-700 focus:border-yellow-600 outline-none text-gray-400">
+                                <option value="" disabled selected>Select Service</option>
+                                <option value="web">Web Development</option>
+                                <option value="design">Graphic Design</option>
+                                <option value="ai">Artificial Intelligence</option>
+                                <option value="marketing">Digital Marketing</option>
+                                <option value="app">App Development</option>
+                            </select>
+                            <textarea name="message" rows="5" placeholder="Tell us about your project..."
+                                class="w-full p-4 rounded-xl bg-black/40 border border-gray-700 focus:border-yellow-600 outline-none text-white"
+                                required></textarea>
+                            <button type="submit"
+                                class="btn-gold text-white w-full py-4 rounded-xl font-semibold text-lg">
+                                Send Message <i class="fas fa-paper-plane ml-2"></i>
+                            </button>
+                        </form>
+
+                        <!-- WhatsApp Button -->
+                        <a href="https://wa.me/923274916727" target="_blank"
+                            class="block mt-4 bg-green-600 hover:bg-green-700 text-white py-4 rounded-xl text-center font-semibold transition">
+                            <i class="fab fa-whatsapp mr-2"></i> Chat on WhatsApp: +92 327 4916727
+                        </a>
+                    </div>
+
+                    <!-- Right: Map & Business Hours -->
+                    <div>
+                        <div class="glass-card p-6 rounded-2xl mb-6">
+                            <h4 class="text-xl font-bold mb-4 flex items-center gap-2">
+                                <i class="fas fa-clock gold-text"></i> Business Hours
+                            </h4>
+                            <div class="space-y-3">
+                                <div class="flex justify-between">
+                                    <span class="text-gray-400">Monday - Friday:</span>
+                                    <span class="font-semibold">9:00 AM - 6:00 PM</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-400">Saturday:</span>
+                                    <span class="font-semibold">10:00 AM - 4:00 PM</span>
+                                </div>
+                                <div class="flex justify-between">
+                                    <span class="text-gray-400">Sunday:</span>
+                                    <span class="font-semibold text-green-400">Closed</span>
+                                </div>
+                                <div class="flex justify-between pt-2 border-t border-gray-700">
+                                    <span class="text-gray-400">Emergency:</span>
+                                    <span class="gold-text font-semibold">24/7 Available</span>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Google Map Embed -->
+                        <div class="glass-card p-4 rounded-2xl">
+                            <h4 class="text-xl font-bold mb-4 flex items-center gap-2">
+                                <i class="fas fa-map-pin gold-text"></i> Our Location
+                            </h4>
+                            <div class="rounded-xl overflow-hidden h-64">
+                                <iframe
+                                    src="https://www.google.com/maps?q=FICER+(FATIMA+INSTITUTE+OF+COMPUTER+EDUCATION+AND+RESOURCES)&output=embed"
+                                    width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy">
+                                </iframe>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="border-t border-yellow-900/30 py-12 px-4">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8">
+                <!-- Company Info -->
+                <div>
+                    <div class="flex items-center gap-2 mb-4">
+                        <div class="w-10 h-10 gold-bg rounded-lg flex items-center justify-center">
+                            <i class="fas fa-crown text-white"></i>
+                        </div>
+                        <span class="text-2xl font-bold gold-text">VIP BUSINESS</span>
+                    </div>
+                    <p class="text-gray-500 text-sm">Premium digital solutions for global businesses.</p>
+                </div>
+
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><a href="#home" class="hover-gold transition">Home</a></li>
+                        <li><a href="#services" class="hover-gold transition">Services</a></li>
+                        <li><a href="#about" class="hover-gold transition">About</a></li>
+                        <li><a href="#contact" class="hover-gold transition">Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services -->
+                <div>
+                    <h4 class="font-bold mb-4">Our Services</h4>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li>Web Development</li>
+                        <li>Graphic Design</li>
+                        <li>Artificial Intelligence</li>
+                        <li>Digital Marketing</li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div>
+                    <h4 class="font-bold mb-4">Contact Info</h4>
+                    <ul class="space-y-2 text-sm text-gray-500">
+                        <li><i class="fas fa-phone gold-text mr-2"></i> +92 327 4916727</li>
+                        <li><i class="fas fa-map-marker-alt gold-text mr-2"></i> VCH8+5X Okara, Pakistan</li>
+                        <li><i class="fas fa-envelope gold-text mr-2"></i>
+                            raisahab2773@gmail.com</li>
+                        <li><i class="fas fa-map-marker-alt gold-text mr-2"></i> OKARA,PUNJAB PAKISTAN</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-600 text-sm">
+                <p>© 2025 Basit BUSINESS. All rights reserved. | Premium Business Solutions</p>
+            </div>
+        </div>
+    </footer>
+    </div>
+</body>
+
+</html>
